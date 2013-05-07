@@ -1,0 +1,11 @@
+Hello, world!
+<form method="get" action="/">
+  <input type="text" name="query">Type yo name</input>
+  <input type="submit" />
+</form>
+
+<% if @photos %>
+  <% @photos.each do |photo| %>
+    <img src="<%=photo.images.standard_resolution.url %>" />
+  <% end %>
+<% end %>
