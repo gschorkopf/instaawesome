@@ -7,7 +7,7 @@ class HomepageController < ActionController::Base
     end
 
     if @user
-      @photos = Instagram.user_recent_media(@user.id)
+      @photos = Instagram.user_recent_media(@user.id)[0..5]
     end
   end
 end

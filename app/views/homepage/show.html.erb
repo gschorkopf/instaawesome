@@ -5,6 +5,7 @@ Hello, world!
 </form>
 
 <% if @photos %>
+  <h2>Last 6 images:</h2>
   <% @photos.each do |photo| %>
     <img src="<%=photo.images.standard_resolution.url %>" />
   <% end %>
