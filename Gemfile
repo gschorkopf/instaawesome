@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
+gem 'rockstar'
 gem 'instagram'
 
 group :assets do
@@ -11,6 +12,7 @@ end
 
 group :development do
   gem "rspec-rails"
+  gem "sqlite3"
 end
 
 gem 'jquery-rails'

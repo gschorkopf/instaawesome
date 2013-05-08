@@ -1,4 +1,4 @@
-Hello, world!
+<h1>Instaawesome</h1>
 <form method="get" action="/">
   <input type="text" name="query">Type yo name</input>
   <input type="submit" />
@@ -9,4 +9,19 @@ Hello, world!
   <% @photos.each do |photo| %>
     <img src="<%=photo.images.standard_resolution.url %>" />
   <% end %>
+<% end %>
+
+<h1>Lastfmawesome</h1>
+<form method="get" action="/">
+  <input type="text" name="artist">Type yo artist</input>
+  <input type="submit" />
+</form>
+
+<% if @rockstar %>
+  <h2>Top tracks for <%= @artist.titleize %>:</h2>
+  <ol>
+  <% @tracks.each do |track| %>
+    <li><%= track.name.titleize %></li>
+  <% end %>
+  </ol>
 <% end %>
